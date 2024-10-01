@@ -7,6 +7,7 @@ import org.example.modelos.Flor;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -151,6 +152,168 @@ public class Main {
         System.out.println("Calidad del Proveedor: " + proveedor2.getCalidadProveedor());
         System.out.println("Tipo de Flores Suministradas: " + proveedor2.getTipoFloresSuministradas());
         System.out.println("Cantidad Mínima de Pedido: " + proveedor2.getCantidadMinimaPedido());
+
+
+        Scanner recogerDatos=new Scanner(System.in);
+        System.out.println("Pedir datos por consola para Cliente");
+
+        System.out.print("Ingrese ID: ");
+        clienteUno.setId(recogerDatos.nextLong());
+        recogerDatos.nextLine();
+
+        System.out.print("Ingrese el nombre: ");
+        clienteUno.setNombre(recogerDatos.nextLine());
+
+        System.out.print("Ingrese los apellidos: ");
+        clienteUno.setApellidos(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el teléfono: ");
+        clienteUno.setTelefono(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la dirección: ");
+        clienteUno.setDireccion(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el método de pago: ");
+        clienteUno.setMetodoPago(recogerDatos.nextLine());
+
+        System.out.print("Ingrese las preferencias de productos: ");
+        clienteUno.setPrefernciasProductos(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la edad: ");
+        clienteUno.setEdad(recogerDatos.nextInt());
+        recogerDatos.nextLine();
+
+        System.out.print("Ingrese el género: ");
+        clienteUno.setGenero(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la fecha de la última compra (YYYY-MM-DD): ");
+        String fechaInput = recogerDatos.nextLine();
+        clienteUno.setUltimaCompra(LocalDate.parse(fechaInput));
+
+
+        System.out.println("Pedir datos por consola para Flor");
+
+        System.out.print("Ingrese ID: ");
+        florUno.setId(recogerDatos.nextLong());
+        recogerDatos.nextLine(); // Consumir el salto de línea
+
+        System.out.print("Ingrese el nombre común: ");
+        florUno.setNombreComun(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el nombre científico: ");
+        florUno.setNombreCientifico(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el color: ");
+        florUno.setColor(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la fragancia: ");
+        florUno.setFragancia(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el hábitat: ");
+        florUno.setHabitat(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el tiempo de crecimiento: ");
+        florUno.setTiempoCrecimiento(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el precio: ");
+        florUno.setPrecio(recogerDatos.nextDouble());
+        recogerDatos.nextLine();
+
+        System.out.print("Ingrese el tamaño: ");
+        florUno.setTamano(recogerDatos.nextInt());
+        recogerDatos.nextLine();
+
+        System.out.print("Ingrese el número de pétalos: ");
+        florUno.setNumeroPetalos(recogerDatos.nextInt());
+        recogerDatos.nextLine();
+
+
+        System.out.println("Pedir datos por consola para Repartidor");
+        System.out.print("Ingrese ID: ");
+        repartidor1.setId(recogerDatos.nextLong());
+        recogerDatos.nextLine();
+
+        System.out.print("Ingrese el nombre: ");
+        repartidor1.setNombre(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el apellido: ");
+        repartidor1.setApellido(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la placa de la moto: ");
+        repartidor1.setPlacaMoto(recogerDatos.nextLong());
+        recogerDatos.nextLine();
+
+        System.out.print("Ingrese el color de la moto: ");
+        repartidor1.setColorMoto(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la marca de la moto: ");
+        repartidor1.setMarcaMoto(recogerDatos.nextLine());
+
+        System.out.print("Ingrese las propinas: ");
+        repartidor1.setPropinas(recogerDatos.nextDouble());
+        recogerDatos.nextLine();
+
+        System.out.print("Ingrese el número de entregas: ");
+        repartidor1.setNumeroEntregas(recogerDatos.nextInt());
+        recogerDatos.nextLine();
+
+        System.out.print("Ingrese la fecha de contratación (YYYY-MM-DD): ");
+        String fechaContratacionInput = recogerDatos.nextLine();
+        repartidor1.setFechaContratacion(LocalDate.parse(fechaContratacionInput)); // Formato de fecha
+
+        System.out.print("Ingrese la fecha y hora de entrega (YYYY-MM-DDTHH:MM): ");
+        String fechaHoraEntregaInput = recogerDatos.nextLine();
+        repartidor1.setFechayhoraEntrega(LocalDateTime.parse(fechaHoraEntregaInput));
+
+        System.out.println("Pedir datos por consola para Proveedor");
+
+        System.out.print("Ingrese ID: ");
+        proveedor1.setId(recogerDatos.nextLong());
+        recogerDatos.nextLine();
+
+        System.out.print("Ingrese el nombre del proveedor: ");
+        proveedor1.setNombreProveedor(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el teléfono de contacto: ");
+        proveedor1.setTelefonoContacto(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el correo electrónico: ");
+        proveedor1.setCorreoElectronico(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la dirección: ");
+        proveedor1.setDireccion(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la ciudad: ");
+        proveedor1.setCiudad(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el país: ");
+        proveedor1.setPais(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la calidad del proveedor: ");
+        proveedor1.setCalidadProveedor(recogerDatos.nextLine());
+
+        System.out.print("Ingrese el tipo de flores suministradas: ");
+        proveedor1.setTipoFloresSuministradas(recogerDatos.nextLine());
+
+        System.out.print("Ingrese la cantidad mínima de pedido: ");
+        proveedor1.setCantidadMinimaPedido(recogerDatos.nextInt());
+        recogerDatos.nextLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
